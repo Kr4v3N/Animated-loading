@@ -22,23 +22,23 @@ body {
 	background-color: blue;
 
 }
+
 .section3 {
 	background-color: #13ED13;
-  color: #000;
+	color: #000;
 }
 
 /*-----------------*\
   A generic class
 \*-----------------*/
 
-
 .loader {
 	width: 50px;
 	height: 50px;
-  /* so that it automatically aligns itself to the left of my text */
+	/* so that it automatically aligns itself to the left of my text */
 	display: inline-block;
-  /* circle centering */
-	vertical-align: middle; 
+	/* circle centering */
+	vertical-align: middle;
 	position: relative;
 }
 
@@ -47,15 +47,18 @@ body {
 \*---------------------------*/
 
 /* to create a quarter circle loader, I need two elements, an entire circle and the second element is the quarter circle */
+
 .loader-quarter {
-  /* Create a perfect circle */
-	border-radius: 50px; 
+	/* Create a perfect circle */
+	border-radius: 50px;
 	border: 5px solid rgba(255, 255, 255, 0.4);
 }
+
 /* I define a pseudo element with after what allows me to insert content before an element and style it "on the fly" */
-.loader-quarter:after{
-  width: 50px;
-  height: 50px;
+
+.loader-quarter:after {
+	width: 50px;
+	height: 50px;
 	content: "";
 	position: absolute;
 	top: -6px;
@@ -65,13 +68,13 @@ body {
 	border-radius: 50px;
 	border: 6px solid transparent;
 	border-top-color: #FFF;
-  /* I indicate the parameters of the animation */
+	/* I indicate the parameters of the animation */
 	-webkit-animation: spin 1s linear infinite;
 	animation: Spin 1s linear infinite;
 
 }
 
- /*-------------------*\
+/*-------------------*\
    Loader dual circle
  \*-------------------*/
 
@@ -80,9 +83,9 @@ body {
 	border: 6px solid transparent;
 	border-top-color: #FFF;
 	border-bottom-color: #FFF;
-  /* I specify the parameters of the animation */
+	/* I specify the parameters of the animation */
 	-webkit-animation: spinreverse 2s linear infinite;
-	animation: spinreverse 2s linear infinite; 
+	animation: spinreverse 2s linear infinite;
 }
 
 .loader-dual:after {
@@ -96,9 +99,9 @@ body {
 	border: 6px solid transparent;
 	border-top-color: #FFF;
 	border-bottom-color: #FFF;
-  opacity: 0.6;
+	opacity: 0.6;
 	-webkit-animation: spinreverse 2s linear infinite;
-  animation: spinreverse 2s linear infinite; 
+	animation: spinreverse 2s linear infinite;
 }
 
 
@@ -113,12 +116,12 @@ body {
 	border: 3px solid transparent;
 	border-top-color: #FFF;
 	border-bottom-color: #FFF;
-  opacity: 0.6;
+	opacity: 0.6;
 	-webkit-animation: spinreverse 6s linear infinite;
-  animation: spinreverse 6s linear infinite; 
+	animation: spinreverse 6s linear infinite;
 }
 
- /*------------------------*\
+/*------------------------*\
    Loader circle multiple
  \*------------------------*/
 
@@ -127,7 +130,7 @@ body {
 	border: 3px solid transparent;
 	border-top-color: #000;
 	-webkit-animation: spinreverse 2s linear infinite;
-	animation: Spin 1s linear infinite; 
+	animation: Spin 1s linear infinite;
 }
 
 .loader-circles:after {
@@ -140,11 +143,12 @@ body {
 	border-radius: 50px;
 	border: 3px solid transparent;
 	border-top-color: #000;
-  opacity: 0.8;
-  -webkit-animation: spin 5s linear infinite;
-  animation: Spin 5s linear infinite;
+	opacity: 0.8;
+	-webkit-animation: spin 5s linear infinite;
+	animation: Spin 5s linear infinite;
 
 }
+
 .loader-circles:before {
 	content: "";
 	position: absolute;
@@ -155,36 +159,50 @@ body {
 	border-radius: 50px;
 	border: 3px solid transparent;
 	border-top-color: #000;
-  opacity: 0.5;
-  -webkit-animation: spin 10s linear infinite;
-  animation: Spin 10s linear infinite;
+	opacity: 0.5;
+	-webkit-animation: spin 10s linear infinite;
+	animation: Spin 10s linear infinite;
 
 }
 
- /*------------------------------------------*\
+/*------------------------------------------*\
    Realization of the animation of the circle 
  \*------------------------------------------*/
 
 @-webkit-keyframes Spin {
-  0% {
-		-webkit-transform: rotate(0deg);}
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
 	100% {
-		-webkit-transform: rotate(360deg);}
+		-webkit-transform: rotate(360deg);
+	}
 }
+
 @keyframes Spin {
-  /*the element does not rotate */
-	0% {  transform: rotate(0deg);} 
-  /* the element rotates*/
-	100% { transform: rotate(360deg);} 
+	/*the element does not rotate */
+	0% {
+		transform: rotate(0deg);
+	}
+	/* the element rotates*/
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 @-webkit-keyframes spinverse {
-	0% { 
-    -webkit-transform: rotate(0deg);}
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
 	100% {
-    -webkit-transform: rotate(-360deg);}
+		-webkit-transform: rotate(-360deg);
+	}
 }
+
 @keyframes spinreverse {
-  0% {transform: rotate(0deg);} 
-  100% {transform: rotate(-360deg);} 
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
 }
